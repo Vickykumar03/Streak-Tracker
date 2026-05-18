@@ -1,0 +1,13 @@
+{
+  "name": "streak-tracker",
+  "version": "1.0.0",
+  "description": "Full-stack coding streak tracker",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm start --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "generate:vapid": "node -e \"const webpush = require('backend/node_modules/web-push'); const keys = webpush.generateVAPIDKeys(); console.log('VAPID_PUBLIC_KEY=' + keys.publicKey); console.log('VAPID_PRIVATE_KEY=' + keys.privateKey);\"",
+    "setup": "cp backend/.env.example backend/.env && echo 'Created backend/.env — please fill in your credentials!'"
+  }
+}
